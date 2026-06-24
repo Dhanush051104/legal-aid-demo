@@ -3,46 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Aid Committee - Demo Chatbot</title>
-    <!-- Tailwind CSS for clean styling -->
+    <title>Legal Aid Committee | School of Law</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        .chat-container { height: calc(100vh - 180px); }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-    <!-- Header -->
-    <header class="bg-slate-800 border-b border-slate-700 p-4 shadow-lg text-center">
-        <h1 class="text-xl font-bold text-teal-400">Legal Aid & Awareness Committee</h1>
-        <p class="text-xs text-slate-400 mt-1">Interactive Prototype Gateway</p>
+    <nav class="bg-slate-900 text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid afa-scale-balanced text-teal-400 text-2xl"></i>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block">LEGAL AID COMMITTEE</span>
+                    <span class="text-xs text-slate-400 block -mt-1">School of Law</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="text-teal-400 hover:text-teal-300">About</a>
+                <a href="#services" class="text-slate-300 hover:text-white">Services</a>
+                <a href="#sdg" class="text-slate-300 hover:text-white">Our Impact</a>
+                <a href="#contact" class="text-slate-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r class from-slate-950 via-slate-900 to-slate-850 text-white py-20 px-4 text-center border-b-4 border-teal-500">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-teal-500/10 text-teal-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-teal-500/20">Academic Year 2026-27</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-4 tracking-tight">Bridging the Gap Between <span class="text-teal-400">Law & the People</span></h1>
+            <p class="mt-6 text-lg text-slate-300 leading-relaxed">Facilitating accessible, free legal literacy and guidance to promote social responsibility, equal opportunity, and structural access to justice.</p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#services" class="bg-teal-500 hover:bg-teal-600 text-slate-950 font-semibold px-6 py-3 rounded-lg shadow-lg transition">Explore Services</a>
+                <button onclick="toggleChat()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3 rounded-lg border border-slate-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-comments"></i> Talk to AI Assistant
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- Chat Area -->
-    <main class="flex-1 max-w-2xl w-full mx-auto p-4 flex flex-col justify-between">
-        <div id="chat-box" class="chat-container overflow-y-auto space-y-4 p-2 rounded-lg bg-slate-800/50 border border-slate-700/50 shadow-inner">
-            <!-- Bot Welcome Message -->
-            <div class="flex items-start gap-2 max-w-[80%]">
-                <div class="bg-teal-600 text-white rounded-lg p-3 text-sm shadow">
-                    Hello! Welcome to the Legal Aid Helpline. How can I assist you with your cyber safety queries today?
+    <section id="about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900">Vision & Mission</h2>
+            <div class="h-1 w-12 bg-teal-500 mx-auto mt-3 rounded"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200/60">
+                <div class="bg-teal-500/10 text-teal-600 w-12 h-12 rounded-lg flex items-center justify-center text-xl mb-4 font-bold">01</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Institutional Excellence</h3>
+                <p class="text-slate-600 leading-relaxed">To organically generate in-depth legal knowledge in the student community so they can proactively transfer acquired expertise to the larger benefit of society.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200/60">
+                <div class="bg-teal-500/10 text-teal-600 w-12 h-12 rounded-lg flex items-center justify-center text-xl mb-4 font-bold">02</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Pro Bono Network</h3>
+                <p class="text-slate-600 leading-relaxed">Fostering institutional mechanisms linking beneficiaries identified through legal camps with qualified professionals, legal aid authorities, and voluntary networks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-slate-100 py-16 border-y border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Committee Grievance Scopes</h2>
+                <p class="text-slate-500 mt-2 text-sm">Routine areas handled by our legal aid desks and community clinics.</p>
+                <div class="h-1 w-12 bg-teal-500 mx-auto mt-3 rounded"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center shadow-sm">
+                    <i class="fa-solid fa-shield-halved text-teal-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-slate-900">Cyber Crime & Fraud</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center shadow-sm">
+                    <i class="fa-solid fa-house-chimney text-teal-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-slate-900">Tenant & Landlord Disputes</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center shadow-sm">
+                    <i class="fa-solid fa-briefcase text-teal-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-slate-900">Employment Rights</h4>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center shadow-sm">
+                    <i class="fa-solid fa-basket-shopping text-teal-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-slate-900">Consumer Protection</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sdg" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">Global SDG Alignment</h2>
+            <div class="h-1 w-12 bg-teal-500 mx-auto mt-3 rounded"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-l-4 border-l-emerald-500 border-slate-200 shadow-sm">
+                <h4 class="font-bold text-slate-900 text-lg mb-2">SDG 16: Peace & Justice</h4>
+                <p class="text-sm text-slate-600">Promoting the absolute rule of law internally and offering targeted access to foundational judicial remediation channels.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-l-4 border-l-cyan-500 border-slate-200 shadow-sm">
+                <h4 class="font-bold text-slate-900 text-lg mb-2">SDG 4: Quality Education</h4>
+                <p class="text-sm text-slate-600">Delivering deep experiential training systems for cross-disciplinary students and widespread legal literacy parameters.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-l-4 border-l-indigo-500 border-slate-200 shadow-sm">
+                <h4 class="font-bold text-slate-900 text-lg mb-2">SDG 10: Reduced Inequalities</h4>
+                <p class="text-sm text-slate-600">Eliminating strategic information access disparities throughout rural, semi-urban, and underserved zones.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-950 text-slate-400 text-xs py-8 mt-auto border-t border-slate-800 text-center">
+        <p>© 2026 Legal Aid and Awareness Committee. All Rights Reserved.</p>
+        <p class="mt-2 text-slate-600">Developed collaboratively for structural social impact modeling.</p>
+    </footer>
+
+    <button onclick="toggleChat()" id="chat-trigger" class="fixed bottom-6 right-6 bg-teal-500 hover:bg-teal-600 text-slate-950 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-105 z-50">
+        <i class="fa-solid fa-messages text-xl"></i>
+    </button>
+
+    <div id="chat-window" class="fixed bottom-24 right-6 w-[360px] max-w-[calc(100vw-32px)] h-[480px] bg-slate-900 border border-slate-700/60 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 opacity-0 scale-95 pointer-events-none z-50">
+        
+        <div class="bg-slate-800 p-4 border-b border-slate-700 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-100">Legal Assistant Bot</h3>
+                    <span class="text-[10px] text-slate-400 block">24/7 Digital Helpline Portal</span>
+                </div>
+            </div>
+            <button onclick="toggleChat()" class="text-slate-400 hover:text-white p-1 rounded transition text-sm">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="chat-box" class="flex-1 overflow-y-auto p-4 space-y-4 text-xs text-slate-100 scrollbar-thin scrollbar-thumb-slate-800">
+            <div class="flex justify-start">
+                <div class="bg-teal-600 text-white rounded-xl p-3 max-w-[85%] shadow leading-relaxed">
+                    Hello! I am your automated legal assistant. Please note this engine offers baseline educational guidelines and does not substitute professional legal counsel. How can I help you today?
                 </div>
             </div>
         </div>
 
-        <!-- Input Field Form -->
-        <form id="chat-form" class="mt-4 flex gap-2">
+        <form id="chat-form" class="p-3 bg-slate-800/80 border-t border-slate-700 flex gap-2">
             <input type="text" id="user-input" 
-                   class="flex-1 bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal-400 text-slate-100" 
-                   placeholder="Type your question here..." required autocomplete="off">
-            <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-slate-900 font-medium px-5 py-3 rounded-lg text-sm transition shadow">
+                   class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-400" 
+                   placeholder="Ask a cyber crime question..." required autocomplete="off">
+            <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold px-4 py-2.5 rounded-lg text-xs transition">
                 Send
             </button>
         </form>
-    </main>
+    </div>
 
-    <!-- Script Logic -->
     <script>
-        // Core FAQ Database
+        // Core Rule FAQ Matrix Database
         const faqDatabase = [
             {
                 keywords: ["suspicious link", "link", "fake link", "phishing"],
@@ -66,27 +176,42 @@
             }
         ];
 
+        const chatWindow = document.getElementById('chat-window');
+        const chatTrigger = document.getElementById('chat-trigger');
         const chatBox = document.getElementById('chat-box');
         const chatForm = document.getElementById('chat-form');
         const userInput = document.getElementById('user-input');
 
-        // Function to append messages to chat view
+        // Toggle Widget Window Display Controller
+        function toggleChat() {
+            const isHidden = chatWindow.classList.contains('pointer-events-none');
+            if (isHidden) {
+                chatWindow.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                chatTrigger.innerHTML = '<i class="fa-solid fa-chevron-down text-lg"></i>';
+                userInput.focus();
+            } else {
+                chatWindow.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                chatTrigger.innerHTML = '<i class="fa-solid fa-messages text-xl"></i>';
+            }
+        }
+
+        // Message Append Stream Processor
         function appendMessage(text, isUser) {
             const wrapper = document.createElement('div');
             wrapper.className = isUser ? "flex justify-end" : "flex justify-start";
             
             const bubble = document.createElement('div');
             bubble.className = isUser 
-                ? "bg-slate-700 text-slate-100 rounded-lg p-3 text-sm max-w-[80%] shadow border border-slate-600" 
-                : "bg-teal-600 text-white rounded-lg p-3 text-sm max-w-[80%] shadow";
+                ? "bg-slate-700 text-slate-100 rounded-xl p-3 max-w-[85%] shadow border border-slate-600/50 leading-relaxed" 
+                : "bg-teal-600 text-white rounded-xl p-3 max-w-[85%] shadow leading-relaxed";
             
             bubble.innerText = text;
             wrapper.appendChild(bubble);
             chatBox.appendChild(wrapper);
-            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
+            chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        // Form handling logic
+        // Form Event Request Submissions Hook
         chatForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const query = userInput.value.trim();
@@ -95,10 +220,8 @@
             appendMessage(query, true);
             userInput.value = '';
 
-            // Fallback default response
             let botReply = "I am a simple demo system. Please ask me about suspicious links, sharing OTPs, hacked accounts, financial scams, or saving evidence.";
             
-            // Match keywords
             const lowerQuery = query.toLowerCase();
             for (const item of faqDatabase) {
                 const match = item.keywords.some(keyword => lowerQuery.includes(keyword));
@@ -108,10 +231,10 @@
                 }
             }
 
-            // Simulate slight system response lag
+            // Artificial UI lag simulation
             setTimeout(() => {
                 appendMessage(botReply, false);
-            }, 400);
+            }, 350);
         });
     </script>
 </body>
