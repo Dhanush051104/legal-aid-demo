@@ -27,6 +27,23 @@
             <hr class="border-slate-200 mb-6">
 
             <form id="register-form" class="space-y-4">
+
+                <div class="space-y-2 mb-4">
+    <button type="button" onclick="autoFillMockUser('Google')" class="w-full flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 rounded-lg py-2.5 text-xs font-semibold shadow-sm transition">
+        <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/web-24dp/logo_googleg_color_1x_web_24dp.png" class="w-4 h-4" alt="Google">
+        Continue with Google
+    </button>
+    <button type="button" onclick="autoFillMockUser('Microsoft')" class="w-full flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 rounded-lg py-2.5 text-xs font-semibold shadow-sm transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="w-4 h-4" alt="Microsoft">
+        Continue with Microsoft
+    </button>
+</div>
+
+<div class="relative flex py-2 items-center">
+    <div class="flex-grow border-t border-slate-200"></div>
+    <span class="flex-shrink mx-4 text-[10px] text-slate-400 font-bold uppercase tracking-wider">Or enter manually</span>
+    <div class="flex-grow border-t border-slate-200"></div>
+</div>
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Full Name</label>
                     <input type="text" id="auth-name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#002147]" placeholder="Enter your full name">
@@ -227,6 +244,18 @@
             authScreen.classList.remove('hidden');
             registerForm.reset();
         }
+
+        // Mock OAuth Autofill for Demo First Impressions
+function autoFillMockUser(provider) {
+    document.getElementById('auth-name').value = provider === 'Google' ? 'Rahul Kumar' : 'Prof. Dr. Anand S.';
+    document.getElementById('auth-phone').value = '+91 98765 43210';
+    document.getElementById('auth-email').value = provider === 'Google' ? 'rahul.kumar@law.christuniversity.in' : 'anand.s@christuniversity.in';
+    
+    // Auto submit after a tiny delay to simulate a real login redirect loop
+    setTimeout(() => {
+        document.getElementById('register-form').dispatchEvent(new Event('submit'));
+    }, 600);
+}
     </script>
 </body>
 </html>
